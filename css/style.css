@@ -457,7 +457,7 @@ footer {
 
     .text-section {
         width: 90%;
-        margin: 1em 0 0 0;
+        margin: 1em auto;
     }
 
     .cards_skils {
@@ -474,15 +474,15 @@ footer {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 1fr);
         gap: 2em;
+        width: 100%;
     }
 
     form>button {
-        margin: 1em 0 1em 0;
+        margin: auto 1em;
     }
 
     form>button {
         grid-row: 5;
         grid-column: 1;
-        margin: auto;
     }
 }
