@@ -401,6 +401,8 @@ footer {
     padding: 5px;
     transition: all 0.3s;
     transform: rotate(-180deg);
+        box-shadow: 1px 3px 1.3vh rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
 }
 
 #btnTopo:hover {

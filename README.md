@@ -2,6 +2,11 @@
 
 Bem-vindo ao meu portfólio! Este projeto apresenta meus principais trabalhos, habilidades e informações de contato, desenvolvido utilizando apenas HTML, CSS e JavaScript.
 
+## Acesse Online
+
+Você pode acessar o portfólio diretamente pelo link:  
+[https://daniel-bitencourt.netlify.app/](https://daniel-bitencourt.netlify.app/)
+
 ## Estrutura do Projeto
 
 ```
