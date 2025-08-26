@@ -418,7 +418,7 @@ footer {
 @media only screen and (max-width: 767px) {
     main {
         margin: auto 5%;
-        padding-top: 5vh;
+        padding-top: 4vh;
     }
 
     #home {
