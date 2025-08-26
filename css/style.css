@@ -470,6 +470,12 @@ footer {
         grid-template-rows: repeat(3, 1fr);
     }
 
+    #contact>h1 {
+        margin: 1em 0 1em 0;
+    }
+    #about, #hard_skills, #projects, #concact{
+        margin: 2em auto;
+    }
     form {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 1fr);
