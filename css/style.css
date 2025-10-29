@@ -9,12 +9,16 @@
     font-style: normal;
     font-variation-settings:
         "wdth" 100;
-    font-size: inherit;
+
 }
 
-/* html {
+
+html {
     font-size: clamp(14px, 2.5vw, 18px);
-    scroll-behavior: smooth;
+}
+
+* {
+    font-size: inherit;
 }
 
 h1 {
@@ -30,13 +34,20 @@ h3 {
 }
 
 p {
-    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
 }
 
-.btn-project,
-#btn-about {
+nav a {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+.btn-project, #btn-about {
     font-size: clamp(0.8rem, 2vw, 1rem);
-} */
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -60,12 +71,15 @@ header {
     backdrop-filter: blur(8px);
 }
 
+nav * {
+    font-size: 18px;
+}
+
 nav a {
     position: relative;
     margin-left: 1em;
     transition: color 0.3s;
     display: inline-block;
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
 }
 
 nav a::after {
@@ -194,12 +208,14 @@ section {
 }
 
 #home .group1 p {
+    font-size: 1.2em;
     color: #AAAAAA;
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
 
 #home .group1 h1 {
+    font-size: 3em;
     margin: 0.2em 0;
     font-weight: 700;
     line-height: 1.2em;
@@ -215,6 +231,7 @@ section {
     width: fit-content;
     color: #191E29;
     background-color: #FFFFFF;
+    font-size: 1.5em;
     padding: 0.5em 2em;
     border-radius: 5px;
     font-weight: 700;
@@ -278,6 +295,7 @@ section h3 {
 }
 
 .text-section {
+    font-size: 1.2em;
     line-height: 1.6em;
     margin: 1em 0 0 1em;
     text-align: justify;
@@ -346,6 +364,7 @@ section h3 {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    font-size: 1.1em;
     letter-spacing: 2px;
     line-height: 1.4em;
 }
@@ -370,6 +389,7 @@ section h3 {
     width: fit-content;
     color: #191E29;
     background-color: #FFFFFF;
+    font-size: 1em;
     padding: 0.5em 1em;
     border-radius: 5px;
     font-weight: 700;
@@ -405,6 +425,7 @@ form {
 input,
 textarea {
     border: none;
+    font-size: 1em;
     resize: vertical;
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
@@ -434,6 +455,7 @@ form button {
     border: none;
     background-color: #FFFFFF;
     color: #191E29;
+    font-size: 1.2em;
     font-weight: 700;
     border-radius: 5px;
     cursor: pointer;
