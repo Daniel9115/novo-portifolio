@@ -12,7 +12,7 @@
     font-size: inherit;
 }
 
-html {
+/* html {
     font-size: clamp(14px, 2.5vw, 18px);
     scroll-behavior: smooth;
 }
@@ -36,7 +36,7 @@ p {
 .btn-project,
 #btn-about {
     font-size: clamp(0.8rem, 2vw, 1rem);
-}
+} */
 
 body {
     font-family: Arial, sans-serif;
