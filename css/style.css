@@ -9,15 +9,12 @@
     font-style: normal;
     font-variation-settings:
         "wdth" 100;
-
+    font-size: inherit;
 }
 
 html {
     font-size: clamp(14px, 2.5vw, 18px);
-}
-
-* {
-    font-size: inherit;
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -36,16 +33,9 @@ p {
     font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
-nav a {
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-}
-
-.btn-project, #btn-about {
+.btn-project,
+#btn-about {
     font-size: clamp(0.8rem, 2vw, 1rem);
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
@@ -70,13 +60,12 @@ header {
     backdrop-filter: blur(8px);
 }
 
-
-
 nav a {
     position: relative;
     margin-left: 1em;
     transition: color 0.3s;
     display: inline-block;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
 }
 
 nav a::after {
