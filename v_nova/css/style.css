@@ -28,21 +28,16 @@ h2 {
 
 h3 {
     font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    margin: 0;
 }
 
 p {
-    font-size: clamp(0.9rem, 2vw, 1.0rem);
+    font-size: clamp(1rem, 2vw, 1rem);
 }
 
-nav a {
-    font-size: clamp(1rem, 2vw, 1.1rem);
+a {
+    text-decoration: none;
 }
-
-/* .btn-project,
-#btn-about {
-    font-size: clamp(0.8rem, 2vw, 1rem);
-} */
-
 
 body {
     font-family: Arial, sans-serif;
@@ -71,6 +66,9 @@ nav a {
     margin-left: 1em;
     transition: color 0.3s;
     display: inline-block;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    color: white;
+
 }
 
 nav a::after {
@@ -91,6 +89,10 @@ header img {
     width: 30px;
     height: 30px;
     cursor: pointer;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
 }
 
 @keyframes slideDown {
@@ -281,6 +283,7 @@ section h3 {
 }
 
 .text-section {
+    font-size: 1.2em;
     line-height: 1.6em;
     margin: 1em 0 0 1em;
     text-align: justify;
@@ -327,20 +330,162 @@ section h3 {
     text-align: center;
 }
 
+#projects {
+    margin: 4em auto;
+}
 
+.cards_projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    margin: 2em auto 0 auto;
+    width: calc(100%);
+}
 
+.cards_projects .card {
+    background-color: #222831;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+    text-align: justify;
+    height: 100%;
+}
 
+.cards_projects .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
+}
 
+.cards_projects .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
 
+.cards_projects .card h2 {
+    border-bottom: 1px solid #FFFFFF;
+    color: #FFFFFF;
+}
 
+.btn-project {
+    display: inline-block;
+    background-color: #FFFFFF;
+    color: #191E29;
+    padding: 0.8em 1.5em;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: auto;
+    transition: all 0.3s;
+    width: 100%;
+}
 
+.btn-project:hover {
+    background-color: #191E29;
+    color: #FFFFFF;
+    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 1);
+}
 
+#contact {
+    display: flex;
+    flex-direction: column;
+    margin: 4em auto;
+}
 
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 4em 2em;
+    width: 80%;
+    margin: auto;
+}
 
+input,
+textarea {
+    border: none;
+    resize: vertical;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    background-color: transparent;
+    border-bottom: 2px solid #FFFFFF;
+    height: 100%;
+}
 
+::placeholder {
+    color: #ffffff;
+    opacity: 1;
+}
 
+input:focus,
+textarea:focus {
+    outline: none;
+}
 
+form button {
+    grid-column: 1/3;
+    padding: 1em 4em;
+    border: none;
+    background-color: #FFFFFF;
+    color: #191E29;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: auto;
+}
 
+form button:hover {
+    background-color: #191E29;
+    color: #FFFFFF;
+    box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 1);
+}
+
+#contact h1 {
+    text-align: center;
+    margin: 3em 0 3em 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #191E29;
+    border-top: 1px solid #FFFFFF;
+}
+
+footer p {
+    margin: 0;
+}
+
+#btnTopo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ffffff;
+    padding: 5px;
+    transition: all 0.3s;
+    transform: rotate(-180deg);
+    box-shadow: 1px 3px 1.3vh rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+#btnTopo:hover {
+    background-color: #191E29;
+    color: #FFFFFF;
+    box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
 
 @media only screen and (max-width: 767px) {
     main {
@@ -401,8 +546,21 @@ section h3 {
     }
 
     .cards_projects {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
+        display: none;
+    }
+
+    #projectsCarousel {
+        display: block !important;
+        height: 50vh;
+        margin: auto 0;
+    }
+
+    .card {
+        background-color: #222831;
+    }
+
+    .card-title {
+        color: #FFFFFF;
     }
 
     #contact h1 {
@@ -411,11 +569,12 @@ section h3 {
 
     #about,
     #hard_skills,
-    #projects,
     #concact {
         margin: 2em auto;
     }
-
+    #projects {
+        margin: 2em 0 0 0 ;
+    }
     form {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 1fr);
@@ -454,6 +613,7 @@ section h3 {
     nav a {
         margin: 1em 0;
         color: #191E29;
+        font-size: clamp(1.5rem, 4vw, 2rem);
     }
 
     nav a:hover::after {
@@ -463,5 +623,4 @@ section h3 {
     nav[style*="opacity: 1"] {
         pointer-events: auto;
     }
-
 }
