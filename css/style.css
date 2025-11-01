@@ -28,21 +28,16 @@ h2 {
 
 h3 {
     font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    margin: 0;
 }
 
 p {
-    font-size: clamp(0.9rem, 2vw, 1.0rem);
+    font-size: clamp(1rem, 2vw, 1rem);
 }
 
-nav a {
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
+a {
+    text-decoration: none;
 }
-
-.btn-project,
-#btn-about {
-    font-size: clamp(0.8rem, 2vw, 1rem);
-}
-
 
 body {
     font-family: Arial, sans-serif;
@@ -66,15 +61,14 @@ header {
     backdrop-filter: blur(8px);
 }
 
-nav * {
-    font-size: 18px;
-}
-
 nav a {
     position: relative;
     margin-left: 1em;
     transition: color 0.3s;
     display: inline-block;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    color: white;
+
 }
 
 nav a::after {
@@ -137,6 +131,7 @@ nav a:nth-child(5) {
     animation: slideDown 0.7s ease 0.6s forwards;
 }
 
+
 main {
     display: flex;
     flex-direction: column;
@@ -154,17 +149,12 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
     grid-template-rows: repeat(3, 1fr);
-    align-items: center;
     gap: 2em;
     width: 100%;
     align-items: center;
-    height: 100vh;
+    height: calc(100vh - 4em);
 }
 
-#home div:nth-child(1) {
-    grid-row: 1/3;
-    grid-column: 1/3;
-}
 
 #home div {
     animation: sildelado 0.7s ease 0.1s forwards;
@@ -182,17 +172,22 @@ section {
     }
 }
 
-#home div:nth-child(2) {
+.group1 {
+    grid-row: 1/3;
+    grid-column: 1/3;
+}
+
+.group2 {
     grid-row: 1/4;
     grid-column: 3;
 }
 
-#home div:nth-child(3) {
+.group3 {
     grid-row: 3;
     grid-column: 1;
 }
 
-#home div:nth-child(4) {
+.group4 {
     grid-row: 3;
     grid-column: 2;
     display: flex;
@@ -202,21 +197,19 @@ section {
     width: 100%;
 }
 
-#home .group1 p {
-    font-size: 1.2em;
+.group1 p {
     color: #AAAAAA;
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
 
-#home .group1 h1 {
-    font-size: 3em;
+.group1 h1 {
     margin: 0.2em 0;
     font-weight: 700;
     line-height: 1.2em;
 }
 
-#home .group2 img {
+.group2 img {
     width: 100%;
 }
 
@@ -249,7 +242,7 @@ section {
     filter: invert(0);
 }
 
-#home .group4 a img {
+.group4 a img {
     width: 50px;
     height: 50px;
     transition: all 0.3s;
@@ -257,7 +250,7 @@ section {
     padding: 1px
 }
 
-#home .group4 a img:hover {
+.group4 a img:hover {
     box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 1);
 }
 
@@ -294,7 +287,7 @@ section h3 {
     line-height: 1.6em;
     margin: 1em 0 0 1em;
     text-align: justify;
-    width: 70%;
+    width: 90%;
 }
 
 #hard_skils {
@@ -309,7 +302,6 @@ section h3 {
     border-radius: 10px;
     padding: 1em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -346,66 +338,62 @@ section h3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1em;
-    width: 100%;
-    margin: 4em auto 0 auto;
+    margin: 2em auto 0 auto;
+    width: calc(100%);
 }
 
-.card {
+.cards_projects .card {
     background-color: #222831;
     border-radius: 10px;
+    padding: 1em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    font-size: 1.1em;
-    letter-spacing: 2px;
-    line-height: 1.4em;
+    transition: all 0.3s;
+    text-align: justify;
+    height: 100%;
 }
 
-.card img {
+.cards_projects .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
+}
+
+.cards_projects .card img {
     width: 100%;
-    height: 10em;
+    height: 200px;
     object-fit: cover;
-    border-radius: 10px 10px 0 0;
+    border-radius: 8px;
+    margin-bottom: 1em;
 }
 
-.card h2 {
-    margin: 13px 13px 0.3em 13px;
+.cards_projects .card h2 {
     border-bottom: 1px solid #FFFFFF;
-    padding-bottom: 0.2em;
-    width: calc(100% - 1em);
-}
-
-.card p {
-    margin: 13px;
+    color: #FFFFFF;
 }
 
 .btn-project {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    color: #191E29;
+    display: inline-block;
     background-color: #FFFFFF;
-    font-size: 1em;
-    padding: 0.5em 1em;
+    color: #191E29;
+    padding: 0.8em 1.5em;
     border-radius: 5px;
-    font-weight: 700;
+    font-weight: 600;
+    text-align: center;
+    margin-top: auto;
     transition: all 0.3s;
-    margin: 1em auto;
+    width: 100%;
 }
 
 .btn-project:hover {
     background-color: #191E29;
     color: #FFFFFF;
-    box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 1);
 }
 
 #contact {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
     margin: 4em auto;
 }
 
@@ -414,16 +402,13 @@ form {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
     gap: 4em 2em;
-    margin-top: 1em;
     width: 80%;
-    height: fit-content;
     margin: auto;
 }
 
 input,
 textarea {
     border: none;
-    font-size: 1em;
     resize: vertical;
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
@@ -432,9 +417,7 @@ textarea {
         "wdth" 100;
     background-color: transparent;
     border-bottom: 2px solid #FFFFFF;
-    width: 100%;
     height: 100%;
-    color: #FFFFFF;
 }
 
 ::placeholder {
@@ -453,12 +436,10 @@ form button {
     border: none;
     background-color: #FFFFFF;
     color: #191E29;
-    font-size: 1.2em;
     font-weight: 700;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s;
-    width: fit-content;
     margin: auto;
 }
 
@@ -470,9 +451,7 @@ form button:hover {
 
 #contact h1 {
     text-align: center;
-    width: 100%;
     margin: 3em 0 3em 0;
-    ;
 }
 
 footer {
@@ -480,6 +459,10 @@ footer {
     padding: 1em 0;
     background-color: #191E29;
     border-top: 1px solid #FFFFFF;
+}
+
+footer p {
+    margin: 0;
 }
 
 #btnTopo {
@@ -563,8 +546,21 @@ footer {
     }
 
     .cards_projects {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
+        display: none;
+    }
+
+    #projectsCarousel {
+        display: block !important;
+        height: 50vh;
+        margin: auto 0;
+    }
+
+    .card {
+        background-color: #222831;
+    }
+
+    .card-title {
+        color: #FFFFFF;
     }
 
     #contact h1 {
@@ -573,11 +569,12 @@ footer {
 
     #about,
     #hard_skills,
-    #projects,
     #concact {
         margin: 2em auto;
     }
-
+    #projects {
+        margin: 2em 0 0 0 ;
+    }
     form {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 1fr);
@@ -616,6 +613,7 @@ footer {
     nav a {
         margin: 1em 0;
         color: #191E29;
+        font-size: clamp(1.5rem, 4vw, 2rem);
     }
 
     nav a:hover::after {
@@ -625,5 +623,4 @@ footer {
     nav[style*="opacity: 1"] {
         pointer-events: auto;
     }
-
 }
