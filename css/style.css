@@ -9,16 +9,13 @@
     font-style: normal;
     font-variation-settings:
         "wdth" 100;
-
+    font-size: inherit;
 }
 
 
 html {
     font-size: clamp(14px, 2.5vw, 18px);
-}
-
-* {
-    font-size: inherit;
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -46,9 +43,6 @@ nav a {
     font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
-html {
-    scroll-behavior: smooth;
-}
 
 body {
     font-family: Arial, sans-serif;
